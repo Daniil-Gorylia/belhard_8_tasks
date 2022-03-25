@@ -28,3 +28,51 @@
 """
 from abc import ABC, abstractmethod
 from math import pi
+
+
+class Shape (ABC):
+
+    @abstractmethod
+    def get_perimeter(self):
+        pass
+
+    @abstractmethod
+    def get_square(self):
+        pass
+
+
+class Circle(Shape):
+    r: float
+
+    def __init__(self, r):
+        self.r = r
+
+    def get_perimeter(self):
+        b = 2 * pi * self.r
+        return b
+
+    def get_square(self):
+        c = pi * self.r **2
+        return c
+
+
+class Rectangle(Shape):
+    a: float
+    b: float
+
+    def __init__(self, a, b):
+        self.a = a
+        self.b = b
+
+    def get_perimeter(self):
+        p = 2 * (self.a + self.b)
+        return p
+
+    def get_square(self):
+        s = self.a * self.b
+        return s
+
+
+class Square(Rectangle):
+    def __init__(self, a):
+        super(Square, self).__init__(a, b = a)
