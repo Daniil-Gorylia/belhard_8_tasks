@@ -38,3 +38,17 @@ class GermanyPerson:
 
 def person_love_science(obj):
     return f'{obj.__class__.__name__} says that: {obj.i_love_science()}'
+
+
+if __name__ == "__main__":
+    UA = AmericanPerson()
+    RU = RussianPerson()
+    GE = GermanyPerson()
+    a = 3
+    some_list = (UA, RU, GE)
+    while a < 4:
+        if not a == 0:
+            a = a - 1
+            print(person_love_science(some_list[a]))
+        else:
+            break
