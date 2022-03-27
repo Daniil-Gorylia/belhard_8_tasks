@@ -52,7 +52,7 @@ class Circle(Shape):
         return b
 
     def get_square(self):
-        c = pi * self.r **2
+        c = pi * self.r ** 2
         return c
 
 
@@ -75,4 +75,4 @@ class Rectangle(Shape):
 
 class Square(Rectangle):
     def __init__(self, a):
-        super(Square, self).__init__(a, b = a)
+        super(Square, self).__init__(a, b=a)
