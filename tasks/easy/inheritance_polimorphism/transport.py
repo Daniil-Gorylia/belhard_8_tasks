@@ -41,7 +41,7 @@ class Transport(ABC):
     color: str
     mileage: int
 
-    def __init__(self, brand, model, issue_year, color, mileage = 0):
+    def __init__(self, brand, model, issue_year, color, mileage=0):
         self.brand = brand
         self.model = model
         self.issue_year = issue_year
@@ -80,5 +80,3 @@ class Airplane(Transport):
         super().move(num_km)
         return f"{self.brand} {self.model} ({self.color} - {self.issue_year}) " \
                f"пролетел {self.mileage} километров"
-
-
