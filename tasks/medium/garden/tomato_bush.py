@@ -23,6 +23,7 @@ class TomatoBush:
         self.tomato_list.clear()
         return copy_list
 
+
 if __name__ == '__main__':
     first_tomato = tomato.Tomato(1)
     second_tomato = tomato.Tomato(2)
